@@ -9,6 +9,14 @@ class CartItem extends React.Component {
             qty: '1',
             img: ''
         }
+        /* Binding - (If we have multiple event handler we can bind over here i.e Constructor.)
+        Or can use arrow function instead of normal ones.
+        this.increaseQuantity = this.increaseQuantity.bind(this); 
+        */
+        }
+    // Arrow function will automatically bind the instance with the value
+    increaseQuantity = () => {
+        console.log('this.state', this.state);
     }
     render() {
         //Grabbing the values from this.state
@@ -24,9 +32,22 @@ class CartItem extends React.Component {
                     <div style={ {color : '#777' } }> Quantity: {qty} </div>
                     <div className="cart-item-actions">
                         {/*button*/}
-                        <img alt="increase" className="action-icons" src="https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1618901846~hmac=a679885032a37d94927d08b3e3df1b6e"/>
-                        <img alt="decrease" className="action-icons" src="https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1618901922~hmac=1ec3865e73678fc3001bc0cb967c7cc9"/>
-                        <img alt="delete" className="action-icons" src="https://www.flaticon.com/svg/vstatic/svg/1345/1345823.svg?token=exp=1618901946~hmac=68dddf6813e0805d45b34ceec0917e72"/>
+                        <img 
+                            alt="decrease" 
+                            className="action-icons" 
+                            src="https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1618901922~hmac=1ec3865e73678fc3001bc0cb967c7cc9"
+                            onClick={this.increaseQuantity}
+                        />
+                        <img 
+                            alt="increase" 
+                            className="action-icons" 
+                            src="https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1618901846~hmac=a679885032a37d94927d08b3e3df1b6e"
+                        />
+                        <img 
+                            alt="delete" 
+                            className="action-icons" 
+                            src="https://www.flaticon.com/svg/vstatic/svg/1345/1345823.svg?token=exp=1618901946~hmac=68dddf6813e0805d45b34ceec0917e72"
+                        />
                     </div>
                 </div>
             </div>
