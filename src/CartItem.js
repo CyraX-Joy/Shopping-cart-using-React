@@ -44,6 +44,9 @@ class CartItem extends React.Component {
         });
     }
     render() {
+        // this.setState({qty: this.state.qty +1 }); we can't use setState inside render
+        // Because it again invoke render() and again ... (Infinite loop) leads to stack overflow. 
+
         // console.log('render');
         //Grabbing the values from this.state ( De-Structure )
         const { title, price, qty} = this.state;
