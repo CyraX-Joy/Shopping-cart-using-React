@@ -13,7 +13,7 @@ class CartItem extends React.Component {
         Or can use arrow function instead of normal ones.
         this.increaseQuantity = this.increaseQuantity.bind(this); 
         */
-        }
+    }
     // Arrow function will automatically bind the instance with the value
     decreaseQuantity = () => {
         // As we don't want the quantity to be less 0
@@ -64,19 +64,19 @@ class CartItem extends React.Component {
                         <img 
                             alt="increase" 
                             className="action-icons" 
-                            src="https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1618965587~hmac=e3c4f4a0cfb9b5544f2309607c9f792f"
+                            src="https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1620055713~hmac=19e0e8f32b3b452d5445819cc4af6e89"
                             onClick={this.increaseQuantity}
                         />
                         <img 
                             alt="decrease" 
                             className="action-icons" 
-                            src="https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1618965402~hmac=59c17168caab957ba797590eea4322e7"
+                            src="https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1620055755~hmac=9a83fc373b65ecf162673124ce160ea8"
                             onClick={this.decreaseQuantity}
                         />
                         <img 
                             alt="delete" 
                             className="action-icons" 
-                            src="https://www.flaticon.com/svg/vstatic/svg/1345/1345823.svg?token=exp=1618965527~hmac=abd5cc9e39fe8048896b66bc8f89668a"
+                            src="https://www.flaticon.com/svg/vstatic/svg/1345/1345874.svg?token=exp=1620055791~hmac=566ce62433c018db4db3504f227ee701"
                         />
                     </div>
                 </div>
