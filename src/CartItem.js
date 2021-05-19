@@ -52,7 +52,7 @@ class CartItem extends React.Component {
 
         // console.log('render');
         //Grabbing the values from this.state ( De-Structure )
-        const { title, price, qty} = this.state;
+        const { title, price, qty} = this.props.item;
         return (
             <div className="cart-item">
                 <div className="left-block">
