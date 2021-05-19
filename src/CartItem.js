@@ -1,7 +1,10 @@
 import React from 'react';
+import { AiFillPlusCircle, AiFillMinusCircle,  AiFillDelete} from "react-icons/ai";
 
 class CartItem extends React.Component {
     constructor() {
+        // Everytime we are adding Contructor to our classes in react, we
+        // we need to add super() (Calling parent class)
         super();
         this.state = {
             price: 9999,
@@ -30,7 +33,7 @@ class CartItem extends React.Component {
     } 
     increaseQuantity = () => {
         // console.log('this.state', this.state);
-        // First Form - if we dont need prevState
+        // First Form - if we don't need prevState
         // this.setState({
         //     qty: this.state.qty+1
         // })
@@ -61,23 +64,21 @@ class CartItem extends React.Component {
                     <div style={ {color : '#777' } }> Quantity: {qty} </div>
                     <div className="cart-item-actions">
                         {/*button*/}
-                        <img 
+                        {/* <img 
                             alt="increase" 
                             className="action-icons" 
                             src="https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1620055713~hmac=19e0e8f32b3b452d5445819cc4af6e89"
                             onClick={this.increaseQuantity}
-                        />
-                        <img 
-                            alt="decrease" 
-                            className="action-icons" 
-                            src="https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1620055755~hmac=9a83fc373b65ecf162673124ce160ea8"
-                            onClick={this.decreaseQuantity}
-                        />
-                        <img 
-                            alt="delete" 
-                            className="action-icons" 
-                            src="https://www.flaticon.com/svg/vstatic/svg/1345/1345874.svg?token=exp=1620055791~hmac=566ce62433c018db4db3504f227ee701"
-                        />
+                        /> */}
+                        <div className="action-icons" onClick={this.increaseQuantity} >
+                            <AiFillPlusCircle />
+                        </div>
+                        <div className="action-icons" onClick={this.decreaseQuantity}>
+                            <AiFillMinusCircle />
+                        </div>
+                        <div className="action-icons" onClick={this.decreaseQuantity}>
+                            <AiFillDelete />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -20,7 +20,12 @@ body {
   height: 25px;
   width: 25px;
   margin-right: 10px;
+  display: inline-block;
 }
 .action-icons:hover {
   cursor: pointer;
+}
+.cart{
+  display: flex;
+  flex-direction: column;
 }
