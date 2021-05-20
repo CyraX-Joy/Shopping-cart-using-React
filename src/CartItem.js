@@ -5,7 +5,7 @@ import {
   AiFillDelete,
 } from "react-icons/ai";
 
-class CartItem extends React.Component {
+const CartItem = (props) => {
     //   constructor() {
         // Everytime we are adding Contructor to our classes in react, we
         // we need to add super() (Calling parent class)
@@ -53,39 +53,37 @@ class CartItem extends React.Component {
     //       }
     //     );
     //   };
-  render() {
     // this.setState({qty: this.state.qty +1 }); we can't use setState inside render
     // Because it again invoke render() and again ... (Infinite loop) leads to stack overflow.
 
     // console.log('render');
     //Grabbing the values from this.state ( De-Structure )
-    const { title, price, qty, id} = this.props.item;
-    const { onIncreaseQuantity, onDecreaseQuantity, onDeleteQuantity, item} = this.props;
-    return (
-      <div className="cart-item">
-        <div className="left-block">
-          <img style={styles.image} />
-        </div>
-        <div className="right-block">
-          <div style={{ fontSize: 25 }}> {title} </div>
-          <div style={{ color: "#777" }}> $:{price} </div>
-          <div style={{ color: "#777" }}> Quantity: {qty} </div>
-          <div className="cart-item-actions">
-            {/*button*/}
-            <div className="action-icons" onClick={() => onIncreaseQuantity(item)}>
-              <AiFillPlusCircle />
-            </div>
-            <div className="action-icons" onClick={() => onDecreaseQuantity(item)}>
-              <AiFillMinusCircle />
-            </div>
-            <div className="action-icons" onClick={() => onDeleteQuantity(id)}>
-              <AiFillDelete />
-            </div>
+  const { title, price, qty, id} = props.item;
+  const { onIncreaseQuantity, onDecreaseQuantity, onDeleteQuantity, item} = props;
+  return (
+    <div className="cart-item">
+      <div className="left-block">
+        <img style={styles.image} />
+      </div>
+      <div className="right-block">
+        <div style={{ fontSize: 25 }}> {title} </div>
+        <div style={{ color: "#777" }}> $:{price} </div>
+        <div style={{ color: "#777" }}> Quantity: {qty} </div>
+        <div className="cart-item-actions">
+          {/*button*/}
+          <div className="action-icons" onClick={() => onIncreaseQuantity(item)}>
+            <AiFillPlusCircle />
+          </div>
+          <div className="action-icons" onClick={() => onDecreaseQuantity(item)}>
+            <AiFillMinusCircle />
+          </div>
+          <div className="action-icons" onClick={() => onDeleteQuantity(id)}>
+            <AiFillDelete />
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 const styles = {

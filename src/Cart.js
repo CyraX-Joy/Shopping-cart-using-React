@@ -10,56 +10,56 @@ class Cart extends React.Component {
         { 
             id: 1, 
             price: 599, 
-            title: "Apple Ipad 8th gen", 
+            title: "Apple Ipad 8th gen - 64GB", 
             qty: 1, 
             img: "" 
         },
         { 
             id: 2, 
             price: 349, 
-            title: "Apple Watch 3 42mm", 
+            title: "Apple Watch 3 - 42mm", 
             qty: 2, 
             img: "" 
         },
         { 
             id: 3, 
             price: 999,
-            title: "Iphone 12 Pro 128GB", 
+            title: "Iphone 12 - 128GB", 
             qty: 4, 
             img: "" 
         },
         {
           id: 4,
-          price: 649,
-          title: "Apple Over-the-Ear Headphones",
+          price: 129,
+          title: "Iphone Charger",
           qty: 1,
           img: "",
         },
         {
           id: 5,
           price: 1299,
-          title: "Apple Macbook Air 512GB",
+          title: "Apple Macbook Air - 512GB",
           qty: 2,
           img: "",
         },
         { 
             id: 6, 
             price: 179, 
-            title: "Apple Airpods 2", 
+            title: "Apple Airpods - 2", 
             qty: 4, 
             img: "" 
         },
         { 
             id: 7, 
             price: 89, 
-            title: "Apple Pencil 2", 
+            title: "Apple Pencil - 2", 
             qty: 1, 
             img: "" 
         },
         {
           id: 8,
           price: 9,
-          title: "Apple Itunes Membership Monthly",
+          title: "Apple Itunes Membership - Monthly",
           qty: 5,
           img: "",
         },
