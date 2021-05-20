@@ -58,12 +58,12 @@ const CartItem = (props) => {
 
     // console.log('render');
     //Grabbing the values from this.state ( De-Structure )
-  const { title, price, qty, id} = props.item;
+  const { title, price, qty, id, img} = props.item;
   const { onIncreaseQuantity, onDecreaseQuantity, onDeleteQuantity, item} = props;
   return (
     <div className="cart-item">
       <div className="left-block">
-        <img style={styles.image} />
+        <img style={styles.image} src={img}/>
       </div>
       <div className="right-block">
         <div style={{ fontSize: 25 }}> {title} </div>
